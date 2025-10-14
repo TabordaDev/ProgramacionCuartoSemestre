@@ -1,6 +1,7 @@
+package PracticaPilasColasArraylist;
 import java.util.*;
 
-public class Ejercicio6 {
+public class Ejercicio1 {
     public static void main(String[] args) {
         String [] vector = {"Thiago", "Angel", "Taborda", "Son geis"};
 

@@ -1,24 +1,24 @@
-import java.util.*;
 
-public class Ejercicio3 {
-    public static boolean cuadradosYCubos(int a, int b) {
-        Deque<Integer> pila = new LinkedList<>();
+import java.util.Stack;
+
+class Ejercicio3 {
+    public static boolean verificar(int a, int b) {
+        Stack<Integer> pila = new Stack<>();
         pila.push(a);
         pila.push(b);
 
-        int bVal = pila.pop();
-        int aVal = pila.pop();
+        int b1 = pila.pop();
+        int a2 = pila.pop();
 
-        double raizCuadrada = Math.sqrt(aVal);
-        double raizCubica = Math.cbrt(bVal);
+        double raizA = Math.sqrt(a2);
+        double raizB = Math.cbrt(b1);
 
-        return Math.abs(raizCuadrada - raizCubica) < 1e-9;
+        return Math.abs(raizA - raizB) < 0.0000001;
     }
 
     public static void main(String[] args) {
-        System.out.println(cuadradosYCubos(4, 8));   // true
-        System.out.println(cuadradosYCubos(16, 48)); // false
-        System.out.println(cuadradosYCubos(9, 27));  // true
+        System.out.println(verificar(4, 8));   // true
+        System.out.println(verificar(16, 48)); // false
+        System.out.println(verificar(9, 27));  // true
     }
 }
-
